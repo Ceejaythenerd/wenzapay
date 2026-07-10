@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+
+  listener:
+    build:
+      context: .
+      dockerfile: services/listener/Dockerfile
+    environment:
+      - LOG_LEVEL=debug
+      - UPSTASH_REDIS_REST_URL=http://redis:8079
+    depends_on:
+      - redis
+
+  redis:
+    image: upstash/redis-local
+    ports:
+      - "8079:8079"
