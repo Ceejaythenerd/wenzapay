@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WenzaPay Widget Test</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .demo-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="color: #0f172a; margin-top: 0;">Awesome Store Checkout</h1>
+    <p style="color: #64748b; margin-bottom: 40px;">Complete your purchase of Premium Membership using crypto.</p>
+    
+    <!-- Widget Script -->
+    <script 
+      src="./dist/widget.js" 
+      data-wpay-key="wpay_test_demo123"
+      data-amount="29.99"
+      data-currency="USD"
+      data-ref="order_987654321">
+    </script>
+    
+    <div style="margin-top: 40px; font-size: 14px; color: #94a3b8;">
+      Check the console for WenzaPay events.
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('payment.confirmed', (e) => {
+      console.log('Payment confirmed!', e.detail);
+      // alert('Payment confirmed received on host page!');
+    });
+  </script>
+</body>
+</html>

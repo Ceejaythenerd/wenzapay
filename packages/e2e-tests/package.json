@@ -1,0 +1,12 @@
+{
+  "name": "@wenzapay/e2e-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.0.0"
+  }
+}

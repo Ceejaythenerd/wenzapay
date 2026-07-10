@@ -1,0 +1,161 @@
+.widgetContainer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  width: 100%;
+  max-width: 400px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #334155;
+  box-sizing: border-box;
+}
+
+.widgetContainer * {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.testBanner {
+  background: #fef08a;
+  color: #854d0e;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.chainList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chainButton {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.chainButton:hover {
+  background: #1e293b;
+  border-color: #6366f1;
+}
+
+.chainName {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.chainDetails {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.qrContainer {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 auto 20px auto;
+}
+
+.addressBox {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  word-break: break-all;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.copyButton {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+}
+
+.copyButton:hover {
+  background: #4f46e5;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.center {
+  text-align: center;
+}
+
+.timer {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.spinner {
+  border: 3px solid rgba(255,255,255,0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #6366f1;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 20px auto;
+}

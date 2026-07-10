@@ -1,0 +1,26 @@
+{
+  "name": "@wenzapay/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@scure/bip32": "^2.2.0",
+    "@scure/bip39": "^2.2.0",
+    "@solana/spl-token": "^0.4.6",
+    "@solana/web3.js": "^1.91.4",
+    "bs58": "^6.0.0",
+    "viem": "^2.9.16",
+    "zod": "^3.23.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}

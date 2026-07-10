@@ -1,0 +1,11 @@
+{
+  "name": "@wenzapay/load-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:load": "k6 run src/payment-create.ts"
+  },
+  "devDependencies": {
+    "@types/k6": "^0.50.0"
+  }
+}
